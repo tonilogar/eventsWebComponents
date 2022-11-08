@@ -1,3 +1,7 @@
+var pepe
+export function rVariable() {
+  return pepe
+}
 class CompSlot extends HTMLElement {
   constructor() {
     super();
@@ -7,7 +11,9 @@ class CompSlot extends HTMLElement {
     if (event.type === "message") {
       event.detail.from = "Robot"
       const data = event.detail;
-      console.log('data ', data.message)
+      pepe = data.message
+      rVariable()
+      console.log('data ', rVariable())
       this.shadowRoot.innerHTML = `
         <div>
           From ${data.from}:
