@@ -1,4 +1,4 @@
-var pepe
+export let pepe
 export function rVariable() {
   return pepe
 }
